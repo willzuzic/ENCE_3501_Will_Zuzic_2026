@@ -1,0 +1,17 @@
+*** SPICE deck for cell NOT_GATE{lay} from library Lab4
+*** Created on Mon Feb 16, 2026 18:37:09
+*** Last revised on Mon Mar 09, 2026 17:07:14
+*** Written on Mon Mar 09, 2026 21:41:30 by Electric VLSI Design System, version 9.08
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: NOT_GATE{lay}
+Mnmos@0 out net@11 gnd gnd NMOS L=0.6U W=3U AS=14.4P AD=8.1P PS=24.3U PD=12.6U
+Mpmos@0 out net@11 vdd vdd PMOS L=0.6U W=6U AS=19.35P AD=8.1P PS=30U PD=12.6U
+
+* Spice Code nodes in cell cell 'NOT_GATE{lay}'
+vdd vdd 0 DC 5
+vin in 0 DC 0
+.dc vin 0 5 1m
+.include C5_models.txt
+.END

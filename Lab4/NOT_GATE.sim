@@ -1,0 +1,14 @@
+| units: 30.0 tech: mocmos format: SU
+| IRSIM file for cell NOT_GATE{lay} from library Lab4
+| Created on Mon Feb 16, 2026 18:37:09
+| Last revised on Mon Mar 09, 2026 17:07:14
+| Written on Mon Mar 09, 2026 21:41:20 by Electric VLSI Design System, version 9.08
+n net@11 gnd out 2 10 -9 2.5 g=S_gnd s=A_160,P_81 d=A_90,P_42
+p net@11 vdd out 2 20 -9 33.5 g=S_vdd s=A_215,P_100 d=A_90,P_42
+r out_contact@2 out_nmos@0 27.0
+r out_contact@3 out_pmos@0 47.5
+C out gnd 5.85
+
+r vdd_contact@4 vdd_pmos@0 47.5
+C vdd gnd 5.42
+C net@11 gnd 3.09

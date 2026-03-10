@@ -1,0 +1,35 @@
+*** SPICE deck for cell INVERTERTEST{sch} from library Lab4
+*** Created on Mon Mar 09, 2026 20:11:07
+*** Last revised on Mon Mar 09, 2026 22:11:03
+*** Written on Mon Mar 09, 2026 22:11:07 by Electric VLSI Design System, version 9.08
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT Lab4__NOT_GATE FROM CELL NOT_GATE{sch}
+.SUBCKT Lab4__NOT_GATE in out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 out in gnd gnd NMOS L=0.6U W=3U
+Mpmos@0 out in vdd vdd PMOS L=0.6U W=6U
+.ENDS Lab4__NOT_GATE
+
+*** SUBCIRCUIT Lab4__NOT_GATE2 FROM CELL NOT_GATE2{sch}
+.SUBCKT Lab4__NOT_GATE2 in out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 out in gnd gnd NMOS L=1.8U W=7.2U
+Mpmos@0 out in vdd vdd PMOS L=1.8U W=14.4U
+.ENDS Lab4__NOT_GATE2
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: INVERTERTEST{sch}
+XNOT_GATE@0 vin vout1 Lab4__NOT_GATE
+XNOT_GATE@1 vin vout2 Lab4__NOT_GATE2
+
+* Spice Code nodes in cell cell 'INVERTERTEST{sch}'
+Vdd vdd 0 DC 5
+Vin vin 0 DC 0
+.dc Vin 0 5 1m
+.include C5_models.txt
+.END

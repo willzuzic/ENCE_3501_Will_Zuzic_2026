@@ -1,0 +1,23 @@
+*** SPICE deck for cell NOT_GATE2{lay} from library Lab4
+*** Created on Mon Mar 09, 2026 16:47:12
+*** Last revised on Mon Mar 09, 2026 21:51:22
+*** Written on Mon Mar 09, 2026 21:54:43 by Electric VLSI Design System, version 9.08
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: NOT_GATE2{lay}
+Mnmos@1 out in gnd gnd NMOS L=1.8U W=7.2U AS=18.675P AD=12.96P PS=25.05U PD=13.2U
+Mnmos@2 gnd in out gnd NMOS L=1.8U W=7.2U AS=12.96P AD=18.675P PS=13.2U PD=25.05U
+Mnmos@3 out in gnd gnd NMOS L=1.8U W=7.2U AS=18.675P AD=12.96P PS=25.05U PD=13.2U
+Mnmos@4 gnd in out gnd NMOS L=1.8U W=7.2U AS=12.96P AD=18.675P PS=13.2U PD=25.05U
+Mpmos@11 vdd in out vdd PMOS L=1.8U W=14.4U AS=12.96P AD=43.2P PS=13.2U PD=38.4U
+Mpmos@12 out in vdd vdd PMOS L=1.8U W=14.4U AS=43.2P AD=12.96P PS=38.4U PD=13.2U
+Mpmos@13 vdd in out vdd PMOS L=1.8U W=14.4U AS=12.96P AD=43.2P PS=13.2U PD=38.4U
+Mpmos@14 out in vdd vdd PMOS L=1.8U W=14.4U AS=43.2P AD=12.96P PS=38.4U PD=13.2U
+
+* Spice Code nodes in cell cell 'NOT_GATE2{lay}'
+vdd vdd 0 DC 5
+vin in 0 DC 0
+.dc vin 0 5 1m
+.include C5_models.txt
+.END
